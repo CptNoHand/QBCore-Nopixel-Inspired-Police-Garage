@@ -79,7 +79,7 @@ AddEventHandler('dox:garage', function(pd)
     local coords = { ['x'] = 458.95, ['y'] = -993.23, ['z'] = 25.377454, ['h'] = 0 }
     QBCore.Functions.SpawnVehicle(vehicle, function(veh)
         SetVehicleNumberPlateText(veh, "ZULU"..tostring(math.random(1000, 9999)))
-        exports['LegacyFuel']:SetFuel(veh, 100.0)
+        exports['cc-fuel']:SetFuel(veh, 100.0)
         SetEntityHeading(veh, coords.h)
         TaskWarpPedIntoVehicle(GetPlayerPed(-1), veh, -1)
         TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(veh))
